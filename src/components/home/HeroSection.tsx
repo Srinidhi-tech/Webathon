@@ -41,6 +41,20 @@ export default function HeroSection({ onBookAppointment, onTrackAppointment, onV
 
             <p className="text-maroon-200 text-xl font-semibold mb-3">{t.hero.subtitle}</p>
 
+            <div className="flex items-center gap-3 mb-5">
+              <img
+                src="/WhatsApp_Image_2026-04-16_at_10.05.49_(7).jpeg"
+                alt="ISO 9001:2015 Certified"
+                className="w-12 h-12 rounded-full object-cover ring-2 ring-white/20 bg-white"
+              />
+              <img
+                src="/WhatsApp_Image_2026-04-16_at_10.05.49_(14).jpeg"
+                alt="College Crest"
+                className="w-12 h-12 rounded-full object-cover ring-2 ring-white/20 bg-white"
+              />
+              <span className="text-maroon-300 text-xs leading-tight">ISO 9001:2015 Certified<br />NAAC 'A' Accredited</span>
+            </div>
+
             <p className="text-maroon-300 text-base leading-relaxed mb-8 max-w-lg">
               {t.hero.tagline}
             </p>
@@ -101,15 +115,15 @@ export default function HeroSection({ onBookAppointment, onTrackAppointment, onV
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden h-48 shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Dental clinic"
+                    src="/WhatsApp_Image_2026-04-16_at_10.05.48_(8).jpeg"
+                    alt="20th Graduation Day"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden h-36 shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/6812540/pexels-photo-6812540.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Students learning"
+                    src="/WhatsApp_Image_2026-04-16_at_10.05.47_(1).jpeg"
+                    alt="Pedodontics OPD"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -117,8 +131,8 @@ export default function HeroSection({ onBookAppointment, onTrackAppointment, onV
               <div className="space-y-4 mt-8">
                 <div className="rounded-2xl overflow-hidden h-36 shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/3779705/pexels-photo-3779705.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Medical team"
+                    src="/WhatsApp_Image_2026-04-16_at_10.05.48_(14).jpeg"
+                    alt="Event Inauguration"
                     className="w-full h-full object-cover"
                   />
                 </div>
