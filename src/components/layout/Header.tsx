@@ -56,13 +56,29 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
       <header className={`sticky top-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg shadow-maroon-900/10' : 'bg-white/98 shadow-sm'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-18">
-            <button onClick={() => onNavigate('home')} className="flex items-center gap-3 group">
-              <div className="w-11 h-11 rounded-full bg-gradient-to-br from-maroon-700 to-maroon-900 flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-sm">RR</span>
-              </div>
+            <button onClick={() => onNavigate('home')} className="flex items-center gap-2.5 group">
+              <img
+                src="/rrdch_logo.jpeg"
+                alt="RRDCH Logo"
+                className="w-12 h-12 rounded-full object-cover shadow-md border border-maroon-200"
+              />
               <div className="hidden sm:block text-left">
                 <div className="text-maroon-800 font-bold text-sm leading-tight group-hover:text-maroon-600 transition-colors">RRDCH</div>
                 <div className="text-gray-500 text-xs leading-tight">Rajarajeshwari Dental</div>
+              </div>
+              <div className="hidden md:flex items-center gap-1.5 ml-2 pl-2 border-l border-gray-200">
+                <img
+                  src="/WhatsApp_Image_2026-04-16_at_10.05.49_(7).jpeg"
+                  alt="ISO Certified"
+                  className="w-8 h-8 rounded-full object-cover shadow-sm border border-gray-100 bg-white"
+                  title="ISO 9001:2015"
+                />
+                <img
+                  src="/WhatsApp_Image_2026-04-16_at_10.05.49_(14).jpeg"
+                  alt="NAAC Accredited"
+                  className="w-8 h-8 rounded-full object-cover shadow-sm border border-gray-100 bg-white"
+                  title="NAAC Accredited"
+                />
               </div>
             </button>
 
