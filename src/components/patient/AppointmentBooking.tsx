@@ -33,7 +33,6 @@ export default function AppointmentBooking({ onClose }: AppointmentBookingProps)
     department: 'General',
     appointment_date: '',
     appointment_time: '',
-    notes: '',
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
@@ -103,7 +102,6 @@ export default function AppointmentBooking({ onClose }: AppointmentBookingProps)
         department: form.department,
         appointment_date: form.appointment_date,
         appointment_time: form.appointment_time,
-        notes: form.notes || null,
       }])
       .select('id')
       .maybeSingle();
@@ -119,7 +117,6 @@ export default function AppointmentBooking({ onClose }: AppointmentBookingProps)
         department: 'General',
         appointment_date: '',
         appointment_time: '',
-        notes: '',
       });
     }
   };
@@ -344,20 +341,6 @@ export default function AppointmentBooking({ onClose }: AppointmentBookingProps)
                     )}
                   </div>
 
-                  {/* Notes - Full Width, Only for New Patients */}
-                  {patientType === 'new' && (
-                    <div className="col-span-2">
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Additional Notes (Optional)</label>
-                      <textarea
-                        name="notes"
-                        value={form.notes}
-                        onChange={handleChange}
-                        rows={2}
-                        className="w-full border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-maroon-300 focus:border-transparent resize-none"
-                        placeholder="Any special requests or medical conditions..."
-                      />
-                    </div>
-                  )}
                 </div>
 
                 {/* Sticky Button */}
