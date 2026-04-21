@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, CheckCircle, Phone, Mail, Calendar, FileText, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import CourseApplicationForm from '../components/admissions/CourseApplicationForm';
 
 const bdsDetails = [
   { label: 'Duration', value: '4 Years + 1 Year Internship' },
@@ -31,6 +33,7 @@ const steps = [
 
 export default function Admissions() {
   const { t } = useLanguage();
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="min-h-screen bg-white">
@@ -65,9 +68,9 @@ export default function Admissions() {
                     </div>
                   ))}
                 </div>
-                <button className="mt-6 w-full bg-maroon-800 hover:bg-maroon-700 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors">
+                <button onClick={() => setShowForm(true)} className="mt-6 w-full bg-maroon-800 hover:bg-maroon-700 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors">
                   <FileText size={17} />
-                  {t.admissions.apply}
+                  Apply Now
                 </button>
               </div>
             </motion.div>
@@ -87,9 +90,9 @@ export default function Admissions() {
                     </div>
                   ))}
                 </div>
-                <button className="mt-4 w-full bg-blue-700 hover:bg-blue-600 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors">
+                <button onClick={() => setShowForm(true)} className="mt-4 w-full bg-blue-700 hover:bg-blue-600 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors">
                   <FileText size={17} />
-                  {t.admissions.apply}
+                  Apply Now
                 </button>
               </div>
             </motion.div>
@@ -150,6 +153,14 @@ export default function Admissions() {
           </div>
         </div>
       </section>
+
+      {showForm && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4 overflow-y-auto">
+          <div className="my-8">
+            <CourseApplicationForm onClose={() => setShowForm(false)} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
